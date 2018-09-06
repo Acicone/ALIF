@@ -1,10 +1,18 @@
 %  Ref. Example 3 page 17 
-%  A. Cicone, J. Liu, H. Zhou. 'Adaptive Local Iterative Filtering for 
+%
+%  Ref: A. Cicone, J. Liu, H. Zhou. 'Adaptive Local Iterative Filtering for 
 %  Signal Decomposition and Instantaneous Frequency analysis'. Applied and 
 %  Computational Harmonic Analysis, Volume 41, Issue 2, September 2016, 
 %  Pages 384-411. doi:10.1016/j.acha.2016.03.001
 %  ArXiv http://arxiv.org/abs/1411.6051
-
+%
+%  A. Cicone. 'Nonstationary signal decomposition for dummies'. 
+%  To appear in the book Advances in Mechanics and Mathematics.
+%  ArXiv https://arxiv.org/abs/1710.04844
+%
+%  A. Cicone, H. Zhou. 'Iterative Filtering algorithm numerical analysis 
+%  with new efficient implementations based on FFT'
+%  ArXiv http://arxiv.org/abs/1802.01359
 
 T=2*pi; % Period
 N=5000; % Number of sample points
@@ -39,7 +47,7 @@ axis([-T T -1 3])
 
 opt = Settings_ALIF('ALIF.NIMFs',1,'plots',1,'saveplots',0,'ALIF.xi',2,'ALIF.delta',4*10^-6);
 
-[IMF,mask_lengths]=ALIFv5_3(f,opt);
+[IMF,mask_lengths]=ALIFv5_4(f,opt);
 
 plot_imf_v8(IMF-[y1;x1+1],tt)
 
