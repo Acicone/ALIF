@@ -1,4 +1,4 @@
-Adaptive Local Iterative Filtering method for the decompostion of non-stationary signals
+Adaptive Local Iterative Filtering method for the decomposition of non-stationary signals
 
 Please refer to Example.m for an example of how to use the code.
 
